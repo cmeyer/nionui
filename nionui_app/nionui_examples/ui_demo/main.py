@@ -103,4 +103,7 @@ def main(args: typing.Sequence[typing.Any], bootstrap_args: typing.Mapping[str, 
 
     window = u.create_window(main_column, title=_("UI Demo"), margin=12, resources=resources)
 
-    return Application.run_window(args, bootstrap_args, window, handler)
+    new_bootstrap_args = dict(bootstrap_args)
+    new_bootstrap_args["canvas"] = True
+
+    return Application.run_window(args, new_bootstrap_args, window, handler)
