@@ -692,7 +692,6 @@ class ListWidget(UserInterface.Widget):
         self.__list_canvas_item = ListCanvasItem.ListCanvasItem(self.__list_canvas_item_delegate, self.__selection, 20)
 
         scroll_area_canvas_item = CanvasItem.ScrollAreaCanvasItem(self.__list_canvas_item)
-        scroll_area_canvas_item.auto_resize_contents = True
         scroll_group_canvas_item = CanvasItem.CanvasItemComposition()
         if border_color is not None:
             scroll_group_canvas_item.border_color = border_color

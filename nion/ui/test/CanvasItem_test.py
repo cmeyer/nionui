@@ -704,7 +704,6 @@ class TestCanvasItemClass(unittest.TestCase):
         content = CanvasItem.BackgroundCanvasItem("#F00")
         content.update_sizing(content.sizing.with_fixed_size(Geometry.IntSize(width=250, height=60)))
         scroll_area_canvas_item = CanvasItem.ScrollAreaCanvasItem(content)
-        scroll_area_canvas_item.auto_resize_contents = True
         right_canvas_item = CanvasItem.ScrollBarCanvasItem(scroll_area_canvas_item)
         bottom_canvas_item = CanvasItem.ScrollBarCanvasItem(scroll_area_canvas_item, CanvasItem.Orientation.Horizontal)
         bottom_canvas_item.update_sizing(bottom_canvas_item.sizing.with_fixed_height(20))
